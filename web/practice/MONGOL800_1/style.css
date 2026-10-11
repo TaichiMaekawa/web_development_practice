@@ -1,0 +1,16 @@
+h1{
+    color:red;
+    font-size:100px;
+}
+
+.markup{
+    font-size:32px;
+    color:black;
+    text-align:left;
+    background-color:yellow;
+    border:10px solid white;
+}
+
+p{
+    font-size:10px;
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MONGOL800 — 沖縄発、3ピースの青春</title>
+  <meta name="description" content="沖縄出身のバンド MONGOL800 の非公式ファンページ（Web練習用）">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ローディング -->
+  <div class="loader" id="loader">
+    <div class="loader__count"><span id="loaderNum">0</span></div>
+    <div class="loader__bar"><span id="loaderBar"></span></div>
+  </div>
+
+  <!-- カスタムカーソル -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- スクロール進捗 -->
+  <div class="progress" id="progress"></div>
+
+  <!-- ヘッダー -->
+  <header class="header" id="header">
+    <a href="#top" class="header__logo">MONGOL<span>800</span></a>
+    <nav class="nav" id="nav">
+      <a href="#about" class="nav__link">About</a>
+      <a href="#member" class="nav__link">Member</a>
+      <a href="#songs" class="nav__link">Songs</a>
+      <a href="#discography" class="nav__link">Discography</a>
+      <a href="#links" class="nav__link">Links</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="メニュー"><span></span><span></span></button>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <canvas class="hero__canvas" id="heroCanvas"></canvas>
+      <div class="hero__sun"></div>
+      <div class="hero__inner">
+        <p class="hero__sub reveal-up">FROM OKINAWA, SINCE 1998</p>
+        <h1 class="hero__title" aria-label="MONGOL800">
+          <span class="split">MONGOL</span>
+          <span class="split split--accent">800</span>
+        </h1>
+        <p class="hero__copy reveal-up">南の島から、まっすぐな歌を。</p>
+        <div class="hero__actions reveal-up">
+          <a href="#songs" class="btn magnetic"><span>代表曲を聴く</span></a>
+          <button class="btn btn--ghost magnetic" id="heartBtn">
+            <span>♥ <b id="heartCount">0</b></span>
+          </button>
+        </div>
+      </div>
+      <div class="hero__scroll"><span>SCROLL</span></div>
+      <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path id="wavePath" d=""></path>
+      </svg>
+    </section>
+
+    <!-- マーキー -->
+    <div class="marquee">
+      <div class="marquee__track">
+        <span>MESSAGE ✦ 小さな恋のうた ✦ あなたに ✦ 琉球愛歌 ✦ OKINAWA ✦ What a Wonderful World!! ✦&nbsp;</span>
+        <span>MESSAGE ✦ 小さな恋のうた ✦ あなたに ✦ 琉球愛歌 ✦ OKINAWA ✦ What a Wonderful World!! ✦&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <div class="section__head">
+        <span class="section__num">01</span>
+        <h2 class="section__title reveal-mask"><span>About</span></h2>
+      </div>
+      <div class="about__grid">
+        <div class="about__img tilt reveal-clip">
+          <img src="img_mongol800.jpg" alt="MONGOL800のイメージ" class="parallax-img">
+        </div>
+        <div class="about__text">
+          <p class="about__lead reveal-up">
+            沖縄・浦添の高校の同級生で結成。<br>
+            まっすぐなメロディと、<br>
+            等身大の言葉で鳴らす<em>青春パンク</em>。
+          </p>
+          <p class="reveal-up">
+            1998年夏に結成された沖縄出身のバンド。2001年にリリースしたインディーズ盤『MESSAGE』が大ヒットし、「小さな恋のうた」は世代を超えて歌い継がれる名曲に。地元・沖縄で主催するフェス「What a Wonderful World!!」も開催している。
+          </p>
+          <div class="stats">
+            <div class="stat reveal-up">
+              <span class="stat__num" data-count="1998">0</span>
+              <span class="stat__label">結成</span>
+            </div>
+            <div class="stat reveal-up">
+              <span class="stat__num" data-count="2001">0</span>
+              <span class="stat__label">『MESSAGE』リリース</span>
+            </div>
+            <div class="stat reveal-up">
+              <span class="stat__num" data-count="800">0</span>
+              <span class="stat__label">モンパチ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEMBER -->
+    <section class="section member" id="member">
+      <div class="section__head">
+        <span class="section__num">02</span>
+        <h2 class="section__title reveal-mask"><span>Member</span></h2>
+      </div>
+      <div class="member__list">
+        <article class="card tilt reveal-up">
+          <div class="card__glow"></div>
+          <span class="card__part">Vo / Ba</span>
+          <h3 class="card__name">キヨサク</h3>
+          <p class="card__en">KIYOSAKU</p>
+          <p class="card__desc">ボーカル＆ベース。バンドの顔であり、楽曲の多くを手がけるソングライター。</p>
+        </article>
+        <article class="card tilt reveal-up">
+          <div class="card__glow"></div>
+          <span class="card__part">Dr</span>
+          <h3 class="card__name">サッシー</h3>
+          <p class="card__en">SASSY</p>
+          <p class="card__desc">ドラム。疾走感あふれるビートでバンドのグルーヴを支える。</p>
+        </article>
+        <article class="card tilt reveal-up">
+          <div class="card__glow"></div>
+          <span class="card__part">EG</span>
+          <h3 class="card__name">クボティー</h3>
+          <p class="card__en">KUBOTIE</p>
+          <p class="card__desc">エレキギター。ライブで鋭いギターサウンドを響かせる。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SONGS -->
+    <section class="section songs" id="songs">
+      <div class="section__head">
+        <span class="section__num">03</span>
+        <h2 class="section__title reveal-mask"><span>Songs</span></h2>
+      </div>
+      <ol class="song-list">
+        <li class="song reveal-up">
+          <a href="https://www.youtube.com/watch?v=JoJ6lnF07U4" target="_blank" rel="noopener" class="song__link">
+            <span class="song__no">01</span>
+            <span class="song__title">小さな恋のうた</span>
+            <span class="song__desc">言わずと知れた代表曲。カラオケでも結婚式でも、何年経っても愛され続けるラブソング。</span>
+            <span class="song__play">▶</span>
+          </a>
+        </li>
+        <li class="song reveal-up">
+          <a href="https://www.youtube.com/watch?v=lWbJFp_OSSg" target="_blank" rel="noopener" class="song__link">
+            <span class="song__no">02</span>
+            <span class="song__title">あなたに</span>
+            <span class="song__desc">大切な人へのシンプルでまっすぐな想い。ライブでは大合唱が起こる一曲。</span>
+            <span class="song__play">▶</span>
+          </a>
+        </li>
+        <li class="song reveal-up">
+          <a href="https://www.youtube.com/watch?v=fuu0sY6ho0g" target="_blank" rel="noopener" class="song__link">
+            <span class="song__no">03</span>
+            <span class="song__title">琉球愛歌</span>
+            <span class="song__desc">沖縄への愛と平和への願いが込められた、モンパチらしい力強いナンバー。</span>
+            <span class="song__play">▶</span>
+          </a>
+        </li>
+      </ol>
+    </section>
+
+    <!-- DISCOGRAPHY -->
+    <section class="section disco" id="discography">
+      <div class="section__head">
+        <span class="section__num">04</span>
+        <h2 class="section__title reveal-mask"><span>Discography</span></h2>
+      </div>
+      <p class="disco__hint reveal-up">← ドラッグ / スクロールで見る →</p>
+      <div class="disco__scroller" id="discoScroller">
+        <div class="album reveal-up">
+          <div class="album__cover album__cover--1"><span>GO ON<br>AS YOU<br>ARE</span></div>
+          <p class="album__year">1999</p>
+          <h3 class="album__title">GO ON AS YOU ARE</h3>
+        </div>
+        <div class="album reveal-up">
+          <div class="album__cover album__cover--2"><span>MES<br>SAGE</span></div>
+          <p class="album__year">2001</p>
+          <h3 class="album__title">MESSAGE</h3>
+        </div>
+        <div class="album reveal-up">
+          <div class="album__cover album__cover--3"><span>百々</span></div>
+          <p class="album__year">2004</p>
+          <h3 class="album__title">百々</h3>
+        </div>
+        <div class="album reveal-up">
+          <div class="album__cover album__cover--4"><span>and<br>more…</span></div>
+          <p class="album__year">— </p>
+          <h3 class="album__title">最新作は公式サイトで</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- LINKS -->
+    <section class="section links" id="links">
+      <div class="section__head">
+        <span class="section__num">05</span>
+        <h2 class="section__title reveal-mask"><span>Links</span></h2>
+      </div>
+      <div class="links__list">
+        <a href="https://x.com/MONGOL800_info" target="_blank" rel="noopener" class="big-link reveal-up">
+          <span class="big-link__text" data-text="X / Twitter">X / Twitter</span>
+          <span class="big-link__arrow">↗</span>
+        </a>
+        <a href="https://www.instagram.com/mongol800_official/" target="_blank" rel="noopener" class="big-link reveal-up">
+          <span class="big-link__text" data-text="Instagram">Instagram</span>
+          <span class="big-link__arrow">↗</span>
+        </a>
+        <a href="https://www.youtube.com/results?search_query=MONGOL800" target="_blank" rel="noopener" class="big-link reveal-up">
+          <span class="big-link__text" data-text="YouTube">YouTube</span>
+          <span class="big-link__arrow">↗</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__big">MONGOL<span>800</span></p>
+    <p class="footer__note">※ Web練習用の非公式ファンページです</p>
+    <a href="#top" class="footer__top magnetic">↑ TOP</a>
+  </footer>
+
+</body>
+</html>
